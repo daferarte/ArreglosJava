@@ -38,6 +38,9 @@ public class Arreglo extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        resultado.setBackground(new java.awt.Color(149, 165, 166));
+        resultado.setOpaque(true);
         getContentPane().add(resultado, java.awt.BorderLayout.CENTER);
 
         jPanel1.setLayout(new java.awt.GridLayout(1, 0));
@@ -53,7 +56,17 @@ public class Arreglo extends javax.swing.JFrame {
 
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
+        jButton1.setBackground(new java.awt.Color(44, 62, 80));
+        jButton1.setForeground(new java.awt.Color(236, 240, 241));
         jButton1.setText("Agregar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -97,6 +110,18 @@ public class Arreglo extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_numeroKeyTyped
+
+    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+        // TODO add your handling code here:
+        jButton1.setBackground(new java.awt.Color(236, 240, 241));
+        jButton1.setForeground(new java.awt.Color(44, 62, 80));
+    }//GEN-LAST:event_jButton1MouseEntered
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+        // TODO add your handling code here:
+        jButton1.setBackground(new java.awt.Color(44, 62, 80));
+        jButton1.setForeground(new java.awt.Color(236, 240, 241));
+    }//GEN-LAST:event_jButton1MouseExited
 
     /**
      * @param args the command line arguments
